@@ -1,0 +1,19 @@
+class Add:
+    def calculate(self, a, b):
+        return a + b
+
+
+class Multiply:
+    def calculate(self, a, b):
+        return a * b
+
+
+def operation(type):
+    if type == "add":
+        return Add()
+    else:
+        return Multiply()
+
+
+op = operation("add")
+print(op.calculate(10, 5))
